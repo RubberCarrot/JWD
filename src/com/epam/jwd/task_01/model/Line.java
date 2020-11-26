@@ -9,6 +9,18 @@ public class Line {
         this.point2 = point2;
     }
 
+    @Override
+    public String toString() {
+        return "Line{" +
+                "point1=" + point1 +
+                ", point2=" + point2 +
+                '}';
+    }
+
+    public String figureName(){
+        return "Line";
+    }
+
     public Point getPoint1() {
         return point1;
     }

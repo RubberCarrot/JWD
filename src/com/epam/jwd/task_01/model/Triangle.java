@@ -11,6 +11,15 @@ public class Triangle {
         this.point3 = point3;
     }
 
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "point1=" + point1 +
+                ", point2=" + point2 +
+                ", point3=" + point3 +
+                '}';
+    }
+
     public Point getPoint1() {
         return point1;
     }

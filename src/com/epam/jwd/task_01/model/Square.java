@@ -13,6 +13,16 @@ public class Square {
         this.point4 = point4;
     }
 
+    @Override
+    public String toString() {
+        return "Square{" +
+                "point1=" + point1 +
+                ", point2=" + point2 +
+                ", point3=" + point3 +
+                ", point4=" + point4 +
+                '}';
+    }
+
     public Point getPoint1() {
         return point1;
     }
