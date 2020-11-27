@@ -1,21 +1,12 @@
 package com.epam.jwd.task01.model;
 
-public class Line implements IFigure {
-    private static Line instance;
-
+public class Line implements IFigure{
     private Point point1;
     private Point point2;
 
-    private Line(Point point1, Point point2) {
+    public Line(Point point1, Point point2) {
         this.point1 = point1;
         this.point2 = point2;
-    }
-
-    public static Line getInstance(Point point1, Point point2){
-        if(instance == null){
-            instance = new Line(point1, point2);
-        }
-        return instance;
     }
 
     @Override
