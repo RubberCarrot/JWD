@@ -1,6 +1,6 @@
 package com.epam.jwd.task_01.model;
 
-public class Triangle {
+public class Triangle implements IFigure {
     private Point point1;
     private Point point2;
     private Point point3;
@@ -42,5 +42,18 @@ public class Triangle {
 
     public void setPoint3(Point point3) {
         this.point3 = point3;
+    }
+
+    @Override
+    public void figurePropertiesStrategy() {
+        double result;
+        double a =  Math.sqrt(Math.pow(point1.getAxisX() - point2.getAxisX(),2) + Math.pow(point1.getAxisY() - point2.getAxisY(), 2));
+        double b = Math.sqrt(Math.pow(point2.getAxisX() - point3.getAxisX(),2) + Math.pow(point2.getAxisY() - point3.getAxisY(), 2));
+        double c =  Math.sqrt(Math.pow(point3.getAxisX() - point1.getAxisX(),2) + Math.pow(point3.getAxisY() - point1.getAxisY(), 2));
+        result = a + b + c;
+        System.out.println("Perimeter =" + result);
+        double p = result/2;
+        result = Math.sqrt(result*(result - a)*(result - b)*(result - c));
+        System.out.println("Square =" + result);
     }
 }

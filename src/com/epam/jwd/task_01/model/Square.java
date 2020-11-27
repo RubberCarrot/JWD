@@ -1,6 +1,6 @@
 package com.epam.jwd.task_01.model;
 
-public class Square {
+public class Square implements IFigure {
     private Point point1;
     private Point point2;
     private Point point3;
@@ -53,5 +53,19 @@ public class Square {
 
     public void setPoint4(Point point4) {
         this.point4 = point4;
+    }
+
+    @Override
+    public void figurePropertiesStrategy() {
+        double result;
+        double a =  Math.sqrt(Math.pow(point1.getAxisX() - point2.getAxisX(),2) + Math.pow(point1.getAxisY() - point2.getAxisY(), 2));
+        double b = Math.sqrt(Math.pow(point2.getAxisX() - point3.getAxisX(),2) + Math.pow(point2.getAxisY() - point3.getAxisY(), 2));
+        double c =  Math.sqrt(Math.pow(point3.getAxisX() - point4.getAxisX(),2) + Math.pow(point3.getAxisY() - point4.getAxisY(), 2));
+        double d =  Math.sqrt(Math.pow(point4.getAxisX() - point1.getAxisX(),2) + Math.pow(point4.getAxisY() - point1.getAxisY(), 2));
+        result = a + b + c + d;
+        System.out.println("Perimeter =" + result);
+        double p = result/2;
+        result = Math.sqrt(result*(result - a)*(result - b)*(result - c)*(result - d));
+        System.out.println("Square =" + result);
     }
 }

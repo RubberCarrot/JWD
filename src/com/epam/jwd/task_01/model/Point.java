@@ -3,10 +3,10 @@ package com.epam.jwd.task_01.model;
 import java.util.Objects;
 
 public class Point {
-    private int axisX;
-    private int axisY;
+    private double axisX;
+    private double axisY;
 
-    public Point(int axisX, int axisY) {
+    public Point(double axisX, double axisY) {
         this.axisX = axisX;
         this.axisY = axisY;
     }
@@ -33,7 +33,7 @@ public class Point {
                 '}';
     }
 
-    public int getAxisX() {
+    public double getAxisX() {
         return axisX;
     }
 
@@ -41,7 +41,7 @@ public class Point {
         this.axisX = axisX;
     }
 
-    public int getAxisY() {
+    public double getAxisY() {
         return axisY;
     }
 

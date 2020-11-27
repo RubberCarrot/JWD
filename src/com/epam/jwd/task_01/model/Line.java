@@ -1,6 +1,6 @@
 package com.epam.jwd.task_01.model;
 
-public class Line {
+public class Line implements IFigure {
     private Point point1;
     private Point point2;
 
@@ -35,5 +35,12 @@ public class Line {
 
     public void setPoint2(Point point2) {
         this.point2 = point2;
+    }
+
+    @Override
+    public void figurePropertiesStrategy() {
+        double result;
+        result = Math.sqrt(Math.pow(point1.getAxisX() - point2.getAxisX(),2) + Math.pow(point1.getAxisY() - point2.getAxisY(), 2));
+        System.out.println("Perimeter =" + result);;
     }
 }
