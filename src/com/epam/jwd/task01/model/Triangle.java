@@ -5,10 +5,18 @@ public class Triangle implements IFigure {
     private Point point2;
     private Point point3;
 
-    public Triangle(Point point1, Point point2, Point point3) {
+    private Triangle(Point point1, Point point2, Point point3) {
         this.point1 = point1;
         this.point2 = point2;
         this.point3 = point3;
+    }
+
+    private static class TriangleHolder{
+        private final static Triangle instance = new Triangle(new Point(2,2), new Point(3,3), new Point(5,5));
+    }
+
+    public static Triangle getInstance(){
+        return TriangleHolder.instance;
     }
 
     @Override

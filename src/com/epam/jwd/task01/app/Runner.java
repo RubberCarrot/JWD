@@ -2,6 +2,7 @@ package com.epam.jwd.task01.app;
 
 import com.epam.jwd.task01.model.Line;
 import com.epam.jwd.task01.model.Point;
+//import com.epam.jwd.task01.model.Square;
 import com.epam.jwd.task01.model.Square;
 import com.epam.jwd.task01.model.Triangle;
 import org.apache.logging.log4j.LogManager;
@@ -24,7 +25,8 @@ public class Runner {
             i++;
         } while(i<4);
 
-        Line[] lines = new Line[2];
+
+        /*Line[] lines = new Line[2];
         lines[0] = new Line(new Point(3,7), new Point(3,7));
         lines[1] = new Line(new Point(3,4), new Point(7,4));
 
@@ -35,7 +37,9 @@ public class Runner {
                 LOGGER.info(lines[i].toString());
             }
         }
+        */
 
+        /*
         Triangle[] triangles = new Triangle[2];
         triangles[0] = new Triangle(new Point(3,7),new Point(7,8), new Point(4,5));
         triangles[1] = new Triangle(new Point(2,2), new Point(3,7), new Point(3,7));
@@ -51,8 +55,10 @@ public class Runner {
             }
             LOGGER.error(triangle.toString() + " not a triangle");
         }
+        */
 
-        Square[] squares = new Square[1];
+
+        /*Square[] squares = new Square[1];
         squares[0] = new Square(new Point(2,3), new Point(5,4), new Point(7,1), new Point(5,5));
 
         for (Square square : squares) {
@@ -68,7 +74,7 @@ public class Runner {
             }
             LOGGER.error(square.toString() + " not a square");
         }
-
+        */
 
 
 
