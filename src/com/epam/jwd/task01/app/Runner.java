@@ -1,9 +1,9 @@
-package com.epam.jwd.task_01.app;
+package com.epam.jwd.task01.app;
 
-import com.epam.jwd.task_01.model.Line;
-import com.epam.jwd.task_01.model.Point;
-import com.epam.jwd.task_01.model.Square;
-import com.epam.jwd.task_01.model.Triangle;
+import com.epam.jwd.task01.model.Line;
+import com.epam.jwd.task01.model.Point;
+import com.epam.jwd.task01.model.Square;
+import com.epam.jwd.task01.model.Triangle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

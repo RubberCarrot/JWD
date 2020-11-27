@@ -1,4 +1,4 @@
-package com.epam.jwd.task_01.model;
+package com.epam.jwd.task01.model;
 
 public class Triangle implements IFigure {
     private Point point1;
