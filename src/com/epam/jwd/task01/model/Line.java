@@ -1,6 +1,6 @@
 package com.epam.jwd.task01.model;
 
-public class Line implements IFigure{
+public class Line{
     private Point point1;
     private Point point2;
 
@@ -37,10 +37,14 @@ public class Line implements IFigure{
         this.point2 = point2;
     }
 
-    @Override
+    public Point[] getArray(Line line){
+        Point[] points = new Point[2];
+        points[0] = new Point(line.point1.getAxisX(), line.point1.getAxisY());
+        points[1] = new Point(line.point2.getAxisX(), line.point2.getAxisY());
+        return points;
+    }
+
     public void figurePropertiesStrategy() {
-        double result;
-        result = Math.sqrt(Math.pow(point1.getAxisX() - point2.getAxisX(),2) + Math.pow(point1.getAxisY() - point2.getAxisY(), 2));
-        System.out.println("Perimeter =" + result);;
+
     }
 }

@@ -1,6 +1,6 @@
 package com.epam.jwd.task01.model;
 
-public class Square implements IFigure {
+public class Square{
     private Point point1;
     private Point point2;
     private Point point3;
@@ -57,17 +57,13 @@ public class Square implements IFigure {
         this.point4 = point4;
     }
 
-    @Override
-    public void figurePropertiesStrategy() {
-        double result;
-        double a =  Math.sqrt(Math.pow(point1.getAxisX() - point2.getAxisX(),2) + Math.pow(point1.getAxisY() - point2.getAxisY(), 2));
-        double b = Math.sqrt(Math.pow(point2.getAxisX() - point3.getAxisX(),2) + Math.pow(point2.getAxisY() - point3.getAxisY(), 2));
-        double c =  Math.sqrt(Math.pow(point3.getAxisX() - point4.getAxisX(),2) + Math.pow(point3.getAxisY() - point4.getAxisY(), 2));
-        double d =  Math.sqrt(Math.pow(point4.getAxisX() - point1.getAxisX(),2) + Math.pow(point4.getAxisY() - point1.getAxisY(), 2));
-        result = a + b + c + d;
-        System.out.println("Perimeter =" + result);
-        double p = result/2;
-        result = Math.sqrt(result*(result - a)*(result - b)*(result - c)*(result - d));
-        System.out.println("Square =" + result);
+    public Point[] getArray(Square square){
+        Point[] points = new Point[3];
+        points[0] = new Point(square.point1.getAxisX(), square.point1.getAxisY());
+        points[1] = new Point(square.point2.getAxisX(), square.point2.getAxisY());
+        points[2] = new Point(square.point3.getAxisX(), square.point3.getAxisY());
+        points[3] = new Point(square.point3.getAxisX(), square.point3.getAxisY());
+        return points;
     }
+
 }

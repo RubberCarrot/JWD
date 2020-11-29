@@ -1,6 +1,6 @@
 package com.epam.jwd.task01.model;
 
-public class MultiAngleFigure implements IFigure {
+public class MultiAngleFigure{
     private Point[] points;
 
     public MultiAngleFigure(Point[] points) {
@@ -15,7 +15,7 @@ public class MultiAngleFigure implements IFigure {
         this.points = points;
     }
 
-    @Override
+
     public void figurePropertiesStrategy() {
 
     }
