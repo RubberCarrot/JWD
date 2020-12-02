@@ -5,12 +5,23 @@ public class Triangle{
     private Point point2;
     private Point point3;
 
-    public Triangle(Point point1, Point point2, Point point3) {
+    private Triangle(Point point1, Point point2, Point point3) {
         this.point1 = point1;
         this.point2 = point2;
         this.point3 = point3;
     }
 
+    public Point[] getArray(Triangle triangle){
+        Point[] points = new Point[3];
+        points[0] = new Point(triangle.point1.getAxisX(), triangle.point1.getAxisY());
+        points[1] = new Point(triangle.point2.getAxisX(), triangle.point2.getAxisY());
+        points[2] = new Point(triangle.point3.getAxisX(), triangle.point3.getAxisY());
+        return points;
+    }
+
+    public static Triangle createTriangle(Point point1, Point point2, Point point3){
+        return new Triangle(point1, point2, point3);
+    }
 
 
     @Override
@@ -46,15 +57,5 @@ public class Triangle{
         this.point3 = point3;
     }
 
-    public Point[] getArray(Triangle triangle){
-        Point[] points = new Point[3];
-        points[0] = new Point(triangle.point1.getAxisX(), triangle.point1.getAxisY());
-        points[1] = new Point(triangle.point2.getAxisX(), triangle.point2.getAxisY());
-        points[2] = new Point(triangle.point3.getAxisX(), triangle.point3.getAxisY());
-        return points;
-    }
 
-    public void figurePropertiesStrategy() {
-
-    }
 }

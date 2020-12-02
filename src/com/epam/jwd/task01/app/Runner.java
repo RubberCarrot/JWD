@@ -1,6 +1,7 @@
 package com.epam.jwd.task01.app;
 
 import com.epam.jwd.task01.model.Line;
+import com.epam.jwd.task01.model.MultiAngleFigure;
 import com.epam.jwd.task01.model.Point;
 import com.epam.jwd.task01.model.Square;
 import com.epam.jwd.task01.model.Triangle;
@@ -26,8 +27,8 @@ public class Runner {
 
 
         Line[] lines = new Line[2];
-        lines[0] = new Line(new Point(3,7), new Point(3,7));
-        lines[1] = new Line(new Point(3,4), new Point(7,4));
+        lines[0] = Line.createLine(new Point(3,7), new Point(3,7));
+        lines[1] = Line.createLine(new Point(3,4), new Point(7,4));
 
         for(i = 0; i < lines.length; i++){
             if(lines[i].getPoint1().equals(lines[i].getPoint2())){
@@ -40,8 +41,8 @@ public class Runner {
 
 
         Triangle[] triangles = new Triangle[2];
-        triangles[0] = new Triangle(new Point(3,7),new Point(7,8), new Point(4,5));
-        triangles[1] = new Triangle(new Point(2,2), new Point(3,7), new Point(3,7));
+        triangles[0] = Triangle.createTriangle(new Point(3,7),new Point(7,8), new Point(4,5));
+        triangles[1] = Triangle.createTriangle(new Point(2,2), new Point(3,7), new Point(3,7));
 
         for (Triangle triangle : triangles) {
             if(!(triangle.getPoint1().equals(triangle.getPoint2()))){
@@ -57,7 +58,7 @@ public class Runner {
 
 
         Square[] squares = new Square[1];
-        squares[0] = new Square(new Point(2,3), new Point(5,4), new Point(7,1), new Point(5,5));
+        squares[0] = Square.createSquare(new Point(2,3), new Point(5,4), new Point(7,1), new Point(5,5));
 
         for (Square square : squares) {
             if (!(square.getPoint1().equals(square.getPoint2()))) {
@@ -73,7 +74,14 @@ public class Runner {
             LOGGER.error(square.toString() + " not a square");
         }
 
-
+        Point[] points1 = new Point[5];
+        points1[0] = new Point(3,5);
+        points1[1] = new Point(9,2);
+        points1[2] = new Point(1,8);
+        points1[3] = new Point(4,4);
+        points1[4] = new Point(7,2);
+        MultiAngleFigure multiAngleFigure = MultiAngleFigure.createMultiAngleFigure(points1);
+        LOGGER.info(multiAngleFigure.toString());
 
 
 
